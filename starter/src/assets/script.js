@@ -44,6 +44,8 @@ const products = [
 
 let cart = [];
 
+let totalPaid = 0;
+
 /* Create a function named addProductToCart that takes in the product productId as an argument
   - addProductToCart should get the correct product based on the productId
   - addProductToCart should then increase the product's quantity
@@ -144,8 +146,10 @@ function emptyCart() {
   Hint: cartTotal function gives us cost of all the products in the cart  
 */
 
+
 function pay(amount) {
   const totalCost = cartTotal();
+  totalPaid += amount; 
   return amount - totalCost;
 }
 

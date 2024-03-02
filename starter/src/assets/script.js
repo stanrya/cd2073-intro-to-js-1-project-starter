@@ -146,12 +146,11 @@ function emptyCart() {
   Hint: cartTotal function gives us cost of all the products in the cart  
 */
 
-
 function pay(amount) {
-  const totalCost = cartTotal();
-  totalPaid += amount; 
-  return amount - totalCost;
+  totalPaid += amount;
+  return totalPaid - cartTotal();
 }
+
 
 /* Place stand out suggestions here (stand out suggestions can be found at the bottom of the project rubric.)*/
 
